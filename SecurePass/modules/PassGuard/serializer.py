@@ -18,7 +18,7 @@ class CredentialSerializer(serializers.ModelSerializer):
     if 'length' in validated_data.keys():
       validated_data['password'] = generate_password(validated_data['length'])
     
-    validated_data['password'] = encrypt(validated_data['password'], validated_data['user'].id)
+    # validated_data['password'] = encrypt(validated_data['password'], validated_data['user'].id)
     return Credential.objects.create(**validated_data)
   
 
