@@ -47,8 +47,3 @@ class SharedCredential(models.Model):
   
   def __str__(self):
     return self.credential.website + ' - ' + self.credential.username
-  
-
-  
-
-
